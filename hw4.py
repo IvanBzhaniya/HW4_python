@@ -4,22 +4,38 @@
 # Затем пользователь вводит сами элементы множеств.
 
 
-n=(int(input("Введите кол-во элементов первого множества N: ")))
-num_list_1=[]
-for i in range(n):
-    num = int(input("Введите num "))
-    num_list_1.append(num)
+# n=(int(input("Введите кол-во элементов первого множества N: ")))
+# num_list_1=[]
+# for i in range(n):
+#     num = int(input("Введите num "))
+#     num_list_1.append(num)
 
 
-m=(int(input("Введите кол-во элементов первого множества M: ")))
-num_list_2 = []
-for i in range(m):
-    num = int(input("Введите num "))
-    num_list_2.append(num)
+# m=(int(input("Введите кол-во элементов первого множества M: ")))
+# num_list_2 = []
+# for i in range(m):
+#     num = int(input("Введите num "))
+#     num_list_2.append(num)
 
 
-num_list3 = num_list_1+num_list_2
+# num_list3 = num_list_1+num_list_2
 
-for i in set(num_list3):
-    if num_list3.count(i) > 1:
-        print(i)
+# for i in set(num_list3):
+#     if num_list3.count(i) > 1:
+#         print(i)
+
+
+# В фермерском хозяйстве в Карелии выращивают чернику. 
+# Она растёт на круглой грядке, причём кусты высажены только по окружности. 
+# Таким образом, у каждого куста есть ровно два соседних. Всего на грядке растёт N кустов.
+
+n_bushes = int(input('Введите количество кустов: '))
+arr = list()
+for i in range(n_bushes):
+    a =int(input('Введите количество ягод: '))
+    arr.append(a)
+
+arr_count = list()
+for i in range(len(arr)):
+       arr_count.append(arr[i-2] + arr[i-1] + arr[i])
+print(max(arr_count))
